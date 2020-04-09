@@ -31,6 +31,7 @@ import com.enrico.drawing.graphicalAtoms.semimetals.*;
 import com.enrico.drawing.graphicalAtoms.transitionalmetals.*;
 import com.enrico.interfaces.windows.ImageSavingInterface;
 import com.enrico.programresources.FontResources;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 import com.enrico.widgets.canvas.FileTypeFilter;
 import com.enrico.widgets.canvas.ImageSaver;
 import com.enrico.widgets.canvas.moleculedrawingcanvas.MoleculeDrawingCanvas;
@@ -177,6 +178,18 @@ public final class MoleculeBuilderWindow extends GenericProblemWindow implements
     private ImageButton drawBtn;
     private JScrollPane scrollPane;
 
+    // Panels where the atoms are positioned by group.
+    private JPanel alkalineMetalsPane;
+    private JPanel alkalineEarthMetalsPane;
+    private JPanel transitionalMetalsPane;
+    private JPanel nonMetalsPane;
+    private JPanel semiMetalsPane;
+    private JPanel PBlockMetalsPane;
+    private JPanel halogensPane;
+    private JPanel nobleGassesPane;
+    private JPanel lanthanidesPane;
+    private JPanel actinidesPane;
+
     private final int INITIAL_CANVAS_SIZE = 1000;
     private int canvasSize = INITIAL_CANVAS_SIZE;
     private final int MAXIMUM_CANVAS_SIZE = 5000;
@@ -202,9 +215,20 @@ public final class MoleculeBuilderWindow extends GenericProblemWindow implements
         scrollPane.getHorizontalScrollBar().getModel().setValue(canvasSize / 2);
         scrollPane.getVerticalScrollBar().getModel().setValue(canvasSize / 2);
 
+        atomsPane.setTitleAt(0, ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.ALKALINE_METALS_TXT));
+        atomsPane.setTitleAt(1, ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.ALKALINE_EARTH_METALS_TXT));
+        atomsPane.setTitleAt(2, ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.TRANSITION_METALS));
+        atomsPane.setTitleAt(3, ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.NON_METALS_TXT));
+        atomsPane.setTitleAt(4, ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.SEMIMETALS));
+        atomsPane.setTitleAt(5, ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.P_BLOCK_METALS));
+        atomsPane.setTitleAt(6, ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.HALOGENS));
+        atomsPane.setTitleAt(7, ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.NOBLE_GASSES));
+        atomsPane.setTitleAt(8, ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.LANTHANIDES));
+        atomsPane.setTitleAt(9, ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.ACTINIDES));
+
         addSaveImageItem(menuBar, () -> {saveImage(this, canvas); return null;});
 
-        JMenuItem sizeItem = menuBar.problemMenu.add("Canvas size");
+        JMenuItem sizeItem = menuBar.problemMenu.add(ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.CANVAS_SIZE));
         sizeItem.setFont(FontResources.menuBarFont);
         sizeItem.addActionListener(actionEvent -> {
             showCanvasSizeDialog();
@@ -224,8 +248,8 @@ public final class MoleculeBuilderWindow extends GenericProblemWindow implements
                                                                          SpinnerDialogInteger.START_VALUE_IS_MINIMUM,
                                                                          MAXIMUM_CANVAS_SIZE,
                                                                          SpinnerDialogInteger.STANDARD_STEP,
-                                                                         "Set canvas size",
-                                                                         "Select canvas size:");
+                                                                         ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.SET_CANVAS_SIZE),
+                                                                         ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.SELECT_CANVAS_SIZE));
         canvasSizeDialog.showDialog();
 
         int newDimension = canvasSizeDialog.getSelectedValue();

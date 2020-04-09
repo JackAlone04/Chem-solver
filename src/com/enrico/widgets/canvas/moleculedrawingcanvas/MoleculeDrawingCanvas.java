@@ -22,6 +22,7 @@ package com.enrico.widgets.canvas.moleculedrawingcanvas;
 import com.enrico.chemistry.atoms.GenericAtom;
 import com.enrico.drawing.graphicalAtoms.GenericGraphicalAtom;
 import com.enrico.drawing.graphicalAtoms.halogens.GraphicalFluorineAtom;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 import com.enrico.widgets.canvas.GenericCanvas;
 import com.enrico.widgets.menu.popupmenu.GraphicalAtomPopupMenu;
 
@@ -452,8 +453,8 @@ public final class MoleculeDrawingCanvas extends GenericCanvas {
         private void singleBondRemoveEvent(GenericGraphicalAtom lastSelectedAtom, int x, int y) {
             GenericGraphicalAtom secondAtom = getGenericGraphicalAtom(x, y);
             if (secondAtom == null) {
-                String msg = "No atom selected";
-                JOptionPane.showMessageDialog(null, msg, "Please select a valid atom.", JOptionPane.ERROR_MESSAGE);
+                String msg = ProgramMessageBundle.getString(ProgramMessageBundle.NO_ATOM_SELECTED_TXT);
+                JOptionPane.showMessageDialog(null, msg, ProgramMessageBundle.getString(ProgramMessageBundle.PLEASE_SELECT_VALID_ATOM_TXT), JOptionPane.ERROR_MESSAGE);
                 return;
             }
 
@@ -461,8 +462,8 @@ public final class MoleculeDrawingCanvas extends GenericCanvas {
                 ionicBondRemoveEvent(lastSelectedAtom, secondAtom);
             } else {
                 if (secondAtom == lastSelectedAtom) {
-                    String msg = "You can't unbond an atom from itself.";
-                    JOptionPane.showMessageDialog(null, msg, "Please select a valid atom.", JOptionPane.ERROR_MESSAGE);
+                    String msg = ProgramMessageBundle.getString(ProgramMessageBundle.CANT_REMOVE_BOND_FROM_ITSELF_TXT);
+                    JOptionPane.showMessageDialog(null, msg, ProgramMessageBundle.getString(ProgramMessageBundle.PLEASE_SELECT_VALID_ATOM_TXT), JOptionPane.ERROR_MESSAGE);
                     return;
                 }
 
@@ -492,8 +493,8 @@ public final class MoleculeDrawingCanvas extends GenericCanvas {
          */
         private void ionicBondRemoveEvent(GenericGraphicalAtom lastSelectedAtom, GenericGraphicalAtom secondAtom) {
             if (secondAtom == null) {
-                String msg = "No atom selected";
-                JOptionPane.showMessageDialog(null, msg, "Please select a valid atom.", JOptionPane.ERROR_MESSAGE);
+                String msg = ProgramMessageBundle.getString(ProgramMessageBundle.NO_ATOM_SELECTED_TXT);
+                JOptionPane.showMessageDialog(null, msg, ProgramMessageBundle.getString(ProgramMessageBundle.PLEASE_SELECT_VALID_ATOM_TXT), JOptionPane.ERROR_MESSAGE);
                 return;
             }
 
@@ -509,14 +510,14 @@ public final class MoleculeDrawingCanvas extends GenericCanvas {
         private void doubleBondRemoveEvent(int x, int y) {
             GenericGraphicalAtom secondAtom = getGenericGraphicalAtom(x, y);
             if (secondAtom == null) {
-                String msg = "No atom selected";
-                JOptionPane.showMessageDialog(null, msg, "Please select a valid atom.", JOptionPane.ERROR_MESSAGE);
+                String msg = ProgramMessageBundle.getString(ProgramMessageBundle.NO_ATOM_SELECTED_TXT);
+                JOptionPane.showMessageDialog(null, msg, ProgramMessageBundle.getString(ProgramMessageBundle.PLEASE_SELECT_VALID_ATOM_TXT), JOptionPane.ERROR_MESSAGE);
                 return;
             }
 
             if (secondAtom == lastSelectedAtom) {
-                String msg = "You can't unbond an atom from itself.";
-                JOptionPane.showMessageDialog(null, msg, "Please select a valid atom.", JOptionPane.ERROR_MESSAGE);
+                String msg = ProgramMessageBundle.getString(ProgramMessageBundle.CANT_REMOVE_BOND_FROM_ITSELF_TXT);
+                JOptionPane.showMessageDialog(null, msg, ProgramMessageBundle.getString(ProgramMessageBundle.PLEASE_SELECT_VALID_ATOM_TXT), JOptionPane.ERROR_MESSAGE);
                 return;
             }
 
@@ -546,14 +547,14 @@ public final class MoleculeDrawingCanvas extends GenericCanvas {
             GenericGraphicalAtom secondAtom = getGenericGraphicalAtom(x, y);
 
             if (secondAtom == null) {
-                String msg = "No atom selected";
-                JOptionPane.showMessageDialog(null, msg, "Please select a valid atom.", JOptionPane.ERROR_MESSAGE);
+                String msg = ProgramMessageBundle.getString(ProgramMessageBundle.NO_ATOM_SELECTED_TXT);
+                JOptionPane.showMessageDialog(null, msg, ProgramMessageBundle.getString(ProgramMessageBundle.PLEASE_SELECT_VALID_ATOM_TXT), JOptionPane.ERROR_MESSAGE);
                 return;
             }
 
             if (secondAtom == lastSelectedAtom) {
-                String msg = "You can't unbond an atom from itself.";
-                JOptionPane.showMessageDialog(null, msg, "Please select a valid atom.", JOptionPane.ERROR_MESSAGE);
+                String msg = ProgramMessageBundle.getString(ProgramMessageBundle.CANT_REMOVE_BOND_FROM_ITSELF_TXT);
+                JOptionPane.showMessageDialog(null, msg, ProgramMessageBundle.getString(ProgramMessageBundle.PLEASE_SELECT_VALID_ATOM_TXT), JOptionPane.ERROR_MESSAGE);
                 return;
             }
 
@@ -622,8 +623,8 @@ public final class MoleculeDrawingCanvas extends GenericCanvas {
          */
         private boolean checkIfBondPossible(GenericGraphicalAtom selectedAtom, int bondNum) {
             if (selectedAtom == null) {
-                String msg = "No atom was selected for bond.";
-                JOptionPane.showMessageDialog(null, msg, "No atom selected", JOptionPane.ERROR_MESSAGE);
+                String msg = ProgramMessageBundle.getString(ProgramMessageBundle.NO_ATOM_FOR_BOND_TXT);
+                JOptionPane.showMessageDialog(null, msg, ProgramMessageBundle.getString(ProgramMessageBundle.NO_ATOM_SELECTED_TXT), JOptionPane.ERROR_MESSAGE);
                 return true;
             }
 
@@ -632,43 +633,43 @@ public final class MoleculeDrawingCanvas extends GenericCanvas {
             }
 
             if (selectedAtom == lastSelectedAtom) {
-                String msg = "You can't bond an atom to itself.";
-                JOptionPane.showMessageDialog(null, msg, "No valid atom selected", JOptionPane.ERROR_MESSAGE);
+                String msg = ProgramMessageBundle.getString(ProgramMessageBundle.CANT_BOND_ATOM_TO_ITSELF_TXT);
+                JOptionPane.showMessageDialog(null, msg, ProgramMessageBundle.getString(ProgramMessageBundle.NO_VALID_ATOM_SELECTED_TXT), JOptionPane.ERROR_MESSAGE);
                 return true;
             }
 
             // Check if it's still possible to make bonds.
             if (lastSelectedAtom.getBondsRemaining() - bondNum < 0) {
-                String msg = "Maximum number of bonds for atom " + lastSelectedAtom.getAtomId() + " has been reached.";
-                JOptionPane.showMessageDialog(null, msg, "Maximum number of atoms reached.", JOptionPane.ERROR_MESSAGE);
+                String msg = ProgramMessageBundle.getString(ProgramMessageBundle.MAXIMUM_NUMBER_OF_BONDS_REACHED_1) + lastSelectedAtom.getAtomId() + " " + ProgramMessageBundle.getString(ProgramMessageBundle.MAXIMUM_NUMBER_OF_BONDS_REACHED_2);
+                JOptionPane.showMessageDialog(null, msg, ProgramMessageBundle.getString(ProgramMessageBundle.MAXIMUM_NUMBER_OF_BONDS_REACHED_TITLE), JOptionPane.ERROR_MESSAGE);
                 return true;
             }
 
             if (selectedAtom.getBondsRemaining() - bondNum < 0) {
-                String msg = "Maximum number of bonds for the selected atom has been reached.";
-                JOptionPane.showMessageDialog(null, msg, "Maximum number of atoms reached.", JOptionPane.ERROR_MESSAGE);
+                String msg = ProgramMessageBundle.getString(ProgramMessageBundle.MAXIMUM_NUMBER_OF_BONDS_REACHED_FOR_SELECTED_ATOM);
+                JOptionPane.showMessageDialog(null, msg, ProgramMessageBundle.getString(ProgramMessageBundle.MAXIMUM_NUMBER_OF_BONDS_REACHED_TITLE), JOptionPane.ERROR_MESSAGE);
                 return true;
             }
 
             if (cursorState == CursorStates.CursorDoubleBond) {
                 if (selectedAtom.getDoubleBondList() == null) {
-                    String msg = "Can't double bond " + lastSelectedAtom.getAtomId() + " to " + selectedAtom.getAtomId();
-                    JOptionPane.showMessageDialog(null, msg, "Can't double bond atoms.", JOptionPane.ERROR_MESSAGE);
+                    String msg = ProgramMessageBundle.getString(ProgramMessageBundle.CANT_DOUBLE_BOND) + lastSelectedAtom.getAtomId() + " " + ProgramMessageBundle.getString(ProgramMessageBundle.TO) + selectedAtom.getAtomId();
+                    JOptionPane.showMessageDialog(null, msg, ProgramMessageBundle.getString(ProgramMessageBundle.CANT_DOUBLE_BOND_TITLE), JOptionPane.ERROR_MESSAGE);
                     return true;
                 }
             }
 
             if (cursorState == CursorStates.CursorTripleBond) {
                 if (selectedAtom.getTripleBondList() == null) {
-                    String msg = "Can't triple bond " + lastSelectedAtom.getAtomId() + " to " + selectedAtom.getAtomId();
-                    JOptionPane.showMessageDialog(null, msg, "Can't triple bond atoms.", JOptionPane.ERROR_MESSAGE);
+                    String msg = ProgramMessageBundle.getString(ProgramMessageBundle.CANT_TRIPLE_BOND) + lastSelectedAtom.getAtomId() + " " + ProgramMessageBundle.getString(ProgramMessageBundle.TO) + selectedAtom.getAtomId();
+                    JOptionPane.showMessageDialog(null, msg, ProgramMessageBundle.getString(ProgramMessageBundle.CANT_TRIPLE_BOND_TITLE), JOptionPane.ERROR_MESSAGE);
                     return true;
                 }
             }
 
             // Check if it's trying to bond two metals.
             if ((selectedAtom.isMetal() && lastSelectedAtom.isMetal())) {
-                String msg = "Can't bond two metals.";
+                String msg = ProgramMessageBundle.getString(ProgramMessageBundle.CANT_BOND_TWO_METALS);
                 JOptionPane.showMessageDialog(null, msg, msg, JOptionPane.ERROR_MESSAGE);
                 return true;
             }
@@ -678,13 +679,13 @@ public final class MoleculeDrawingCanvas extends GenericCanvas {
                  !(lastSelectedAtom instanceof GraphicalFluorineAtom)) ||
                  (!(selectedAtom instanceof GraphicalFluorineAtom) &&
                   lastSelectedAtom.getClassType() == GenericAtom.AtomClassType.NobleGasses)) {
-                String msg = "Noble gasses can only be bonded to Fluorine.";
+                String msg = ProgramMessageBundle.getString(ProgramMessageBundle.NOBLE_TO_FLUORINE);
                 JOptionPane.showMessageDialog(null, msg, msg, JOptionPane.ERROR_MESSAGE);
                 return true;
             }
 
             if (selectedAtom.getClassType() == GenericAtom.AtomClassType.NobleGasses && lastSelectedAtom.getClassType() == GenericAtom.AtomClassType.NobleGasses) {
-                String msg = "Can't bond two noble gasses.";
+                String msg = ProgramMessageBundle.getString(ProgramMessageBundle.CANT_BOND_NOBLE_GASSES);
                 JOptionPane.showMessageDialog(null, msg, msg, JOptionPane.ERROR_MESSAGE);
                 return true;
             }
@@ -838,7 +839,7 @@ public final class MoleculeDrawingCanvas extends GenericCanvas {
      */
     private void addNewAtom(int x, int y) {
         if (currentClassPath.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Please select an atom.", "No atom selected", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, ProgramMessageBundle.getString(ProgramMessageBundle.PLEASE_SELECT_VALID_ATOM_TXT), ProgramMessageBundle.getString(ProgramMessageBundle.NO_ATOM_SELECTED_TXT), JOptionPane.ERROR_MESSAGE);
             return;
         }
 

@@ -21,6 +21,7 @@ package com.enrico.windows.dialogs.graphicalatomproperties;
 
 import com.enrico.drawing.graphicalAtoms.GenericGraphicalAtom;
 import com.enrico.programresources.FontResources;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 import com.enrico.widgets.buttons.ProgramButton;
 import com.enrico.widgets.label.ProgramLabel;
 import com.enrico.widgets.textfiled.ProgramTextField;
@@ -54,34 +55,41 @@ public final class GraphicalAtomPropertiesDialog extends JDialog {
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
         setMinimumSize(new Dimension(500, 300));
-        setTitle("Atom properties");
+        setTitle(ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.ATOM_PROPERTIES_TITLE));
         setResizable(false);
 
         this.atom = atom;
 
         atom_id_lbl.setFont(FontResources.normalTextFont);
+        atom_id_lbl.setText(ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.ATOM_ID_PROPERTIES_TXT));
         atom_id_txt_field.setFont(FontResources.normalTextFont);
         atom_id_txt_field.setText(atom.getAtomId());
 
         atom_name_lbl.setFont(FontResources.normalTextFont);
+        atom_name_lbl.setText(ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.ATOM_NAME_PROPERTIES_TXT));
         atom_name_lbl_out.setFont(FontResources.normalTextFont);
         atom_name_lbl_out.setText(atom.getCompleteName());
 
         general_properties_lbl.setFont(FontResources.normalTextFont);
+        general_properties_lbl.setText(ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.GENERAL_PROPERTIES_TXT));
 
         electronegativity_lbl.setFont(FontResources.normalTextFont);
+        electronegativity_lbl.setText(ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.ELECTRONEGATIVITY_PROPERTIES_TXT));
         electronegativity_out_lbl.setFont(FontResources.normalTextFont);
         electronegativity_out_lbl.setText(String.valueOf(atom.getElectronegativity()));
 
         mass_lbl.setFont(FontResources.normalTextFont);
+        mass_lbl.setText(ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.MASS_PROPERTIES_TXT));
         mass_out_lbl.setFont(FontResources.normalTextFont);
         mass_out_lbl.setText(String.valueOf(atom.getAtomicMass()));
 
         atomic_number_lbl.setFont(FontResources.normalTextFont);
+        atomic_number_lbl.setText(ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.ATOMIC_NUMBER_PROPERTIES_TXT));
         atomic_number_out_lbl.setFont(FontResources.normalTextFont);
         atomic_number_out_lbl.setText(String.valueOf(atom.getAtomicNumber()));
 
         atom_class_lbl.setFont(FontResources.normalTextFont);
+        atom_class_lbl.setText(ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.ATOMIC_CLASS_PROPERTIES_TXT));
         atom_class_out_lbl.setFont(FontResources.normalTextFont);
         atom_class_out_lbl.setText(atom.getClassType().toString());
 
@@ -110,7 +118,7 @@ public final class GraphicalAtomPropertiesDialog extends JDialog {
     }
 
     private void createUIComponents() {
-        buttonOK = new ProgramButton("OK");
+
     }
 
     public void showDialog() {
