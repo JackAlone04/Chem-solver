@@ -19,7 +19,6 @@
 
 package com.enrico.programresources.messagebundle;
 
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
@@ -51,10 +50,12 @@ public final class ProgramMessageBundle {
         return null;
     }
 
+    // Welcome window.
     public static final String WELCOME_TITLE = "welcome_title";
     public static final String WELCOME_SUBTITLE = "welcome_subtitle";
     public static final String WELCOME_BTN = "welcome_btn";
 
+    // Elements class name.
     public static final String ALKALINE_METALS_TXT = "alkaline_metals";             // 0
     public static final String ALKALINE_EARTH_METALS_TXT = "alkaline_earth_metals"; // 1
     public static final String TRANSITION_METALS = "transition_metals";             // 2
@@ -66,6 +67,7 @@ public final class ProgramMessageBundle {
     public static final String LANTHANIDES = "lanthanides";                         // 8
     public static final String ACTINIDES = "actinides";                             // 9
 
+    // Canvas resizing.
     public static final String CANVAS_SIZE = "canvas_size";
     public static final String SET_CANVAS_SIZE = "set_canvas_size";
     public static final String SELECT_CANVAS_SIZE = "select_canvas_size";
