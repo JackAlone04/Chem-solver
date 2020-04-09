@@ -839,7 +839,7 @@ public final class MoleculeDrawingCanvas extends GenericCanvas {
      */
     private void addNewAtom(int x, int y) {
         if (currentClassPath.isEmpty()) {
-            JOptionPane.showMessageDialog(this, ProgramMessageBundle.getString(ProgramMessageBundle.PLEASE_SELECT_VALID_ATOM_TXT), ProgramMessageBundle.getString(ProgramMessageBundle.NO_ATOM_SELECTED_TXT), JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, ProgramMessageBundle.getString(ProgramMessageBundle.SELECT_AN_ATOM), ProgramMessageBundle.getString(ProgramMessageBundle.NO_ATOM_SELECTED_TXT), JOptionPane.ERROR_MESSAGE);
             return;
         }
 
