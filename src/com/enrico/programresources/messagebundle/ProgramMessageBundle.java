@@ -113,4 +113,14 @@ public final class ProgramMessageBundle {
     public static final String NOBLE_TO_FLUORINE = "noble_to_fluorine";
     public static final String CANT_BOND_NOBLE_GASSES = "cant_bond_noble_gasses";
     public static final String SELECT_AN_ATOM = "select_an_atom";
+
+    // Atom popup menu.
+    public static final String PROPERTIES_TXT = "properties_txt";
+    public static final String SINGLE_BOND_TO_TXT = "single_bond_to_txt";
+    public static final String REMOVE_SINGLE_BOND_TXT = "remove_single_bond_txt";
+    public static final String REMOVE_ATOM_TXT = "remove_atom_txt";
+    public static final String DOUBLE_BOND_TO_TXT = "double_bond_to_txt";
+    public static final String REMOVE_DOUBLE_BOND_TXT = "remove_double_bond_txt";
+    public static final String TRIPLE_BOND_TO_TXT = "triple_bond_to_txt";
+    public static final String REMOVE_TRIPLE_BOND_TXT = "remove_triple_bond_txt";
 }
