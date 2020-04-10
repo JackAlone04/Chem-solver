@@ -20,7 +20,6 @@
 package com.enrico.interfaces.atoms.semimetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
-import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
 import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface BoronAtomInterface {
