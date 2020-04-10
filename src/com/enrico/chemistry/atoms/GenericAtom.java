@@ -19,6 +19,8 @@
 
 package com.enrico.chemistry.atoms;
 
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
+
 public abstract class GenericAtom {
 
     protected final String symbol;
@@ -37,61 +39,61 @@ public abstract class GenericAtom {
         AlkalineMetals {
             @Override
             public String toString() {
-                return "Alkaline metals";
+                return ProgramMessageBundle.getString(ProgramMessageBundle.ALKALINE_METALS);
             }
         },
         AlkalineEarthMetals {
             @Override
             public String toString() {
-                return "Alkaline earth metals";
+                return ProgramMessageBundle.getString(ProgramMessageBundle.ALKALINE_EARTH_METALS);
             }
         },
         TransitionalMetals {
             @Override
             public String toString() {
-                return "Transitional metals";
+                return ProgramMessageBundle.getString(ProgramMessageBundle.TRANSITION_METALS);
             }
         },
         NotMetals {
             @Override
             public String toString() {
-                return "Non metals";
+                return ProgramMessageBundle.getString(ProgramMessageBundle.NON_METALS);
             }
         },
         SemiMetals  {
             @Override
             public String toString() {
-                return "Semi metals";
+                return ProgramMessageBundle.getString(ProgramMessageBundle.SEMIMETALS);
             }
         },
         PBlockMetals  {
             @Override
             public String toString() {
-                return "P-Block metals";
+                return ProgramMessageBundle.getString(ProgramMessageBundle.P_BLOCK_METALS);
             }
         },
         Halogens {
             @Override
             public String toString() {
-                return "Halogens";
+                return ProgramMessageBundle.getString(ProgramMessageBundle.HALOGENS);
             }
         },
         NobleGasses {
             @Override
             public String toString() {
-                return "Noble gasses";
+                return ProgramMessageBundle.getString(ProgramMessageBundle.NOBLE_GASSES);
             }
         },
         Lanthanides {
             @Override
             public String toString() {
-                return "Lanthanides";
+                return ProgramMessageBundle.getString(ProgramMessageBundle.LANTHANIDES);
             }
         },
         Actinides {
             @Override
             public String toString() {
-                return "Actinides";
+                return ProgramMessageBundle.getString(ProgramMessageBundle.ACTINIDES);
             }
         }
     }

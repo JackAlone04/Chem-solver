@@ -56,16 +56,16 @@ public final class ProgramMessageBundle {
     public static final String WELCOME_BTN = "welcome_btn";
 
     // Elements class name.
-    public static final String ALKALINE_METALS_TXT = "alkaline_metals";             // 0
-    public static final String ALKALINE_EARTH_METALS_TXT = "alkaline_earth_metals"; // 1
-    public static final String TRANSITION_METALS = "transition_metals";             // 2
-    public static final String NON_METALS_TXT = "nonmetals";                        // 3
-    public static final String SEMIMETALS = "semimetals";                           // 4
-    public static final String P_BLOCK_METALS = "pblock_metals";                    // 5
-    public static final String HALOGENS = "halogens";                               // 6
-    public static final String NOBLE_GASSES = "noble_gasses";                       // 7
-    public static final String LANTHANIDES = "lanthanides";                         // 8
-    public static final String ACTINIDES = "actinides";                             // 9
+    public static final String ALKALINE_METALS = "alkaline_metals";             // 0
+    public static final String ALKALINE_EARTH_METALS = "alkaline_earth_metals"; // 1
+    public static final String TRANSITION_METALS = "transition_metals";         // 2
+    public static final String NON_METALS = "nonmetals";                        // 3
+    public static final String SEMIMETALS = "semimetals";                       // 4
+    public static final String P_BLOCK_METALS = "pblock_metals";                // 5
+    public static final String HALOGENS = "halogens";                           // 6
+    public static final String NOBLE_GASSES = "noble_gasses";                   // 7
+    public static final String LANTHANIDES = "lanthanides";                     // 8
+    public static final String ACTINIDES = "actinides";                         // 9
 
     // Canvas resizing.
     public static final String CANVAS_SIZE = "canvas_size";

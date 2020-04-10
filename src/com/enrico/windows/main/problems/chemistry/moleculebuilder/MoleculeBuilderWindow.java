@@ -215,10 +215,10 @@ public final class MoleculeBuilderWindow extends GenericProblemWindow implements
         scrollPane.getHorizontalScrollBar().getModel().setValue(canvasSize / 2);
         scrollPane.getVerticalScrollBar().getModel().setValue(canvasSize / 2);
 
-        atomsPane.setTitleAt(0, ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.ALKALINE_METALS_TXT));
-        atomsPane.setTitleAt(1, ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.ALKALINE_EARTH_METALS_TXT));
+        atomsPane.setTitleAt(0, ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.ALKALINE_METALS));
+        atomsPane.setTitleAt(1, ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.ALKALINE_EARTH_METALS));
         atomsPane.setTitleAt(2, ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.TRANSITION_METALS));
-        atomsPane.setTitleAt(3, ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.NON_METALS_TXT));
+        atomsPane.setTitleAt(3, ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.NON_METALS));
         atomsPane.setTitleAt(4, ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.SEMIMETALS));
         atomsPane.setTitleAt(5, ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.P_BLOCK_METALS));
         atomsPane.setTitleAt(6, ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.HALOGENS));
