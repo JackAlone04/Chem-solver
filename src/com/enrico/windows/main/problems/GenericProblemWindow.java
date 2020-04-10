@@ -20,6 +20,7 @@
 package com.enrico.windows.main.problems;
 
 import com.enrico.programresources.FontResources;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 import com.enrico.widgets.menu.ProblemWindowMenuBar;
 import com.enrico.windows.BasicWindow;
 
@@ -36,7 +37,7 @@ public abstract class GenericProblemWindow extends BasicWindow {
     public abstract void saveProject();
 
     protected final void addSaveImageItem(@NotNull ProblemWindowMenuBar menuBar, Callable<Void> saveMethod) {
-        JMenuItem saveImageItem = menuBar.problemMenu.add("Save image");
+        JMenuItem saveImageItem = menuBar.problemMenu.add(ProgramMessageBundle.getString(ProgramMessageBundle.SAVE_IMAGE_TXT));
         saveImageItem.addActionListener(actionEvent -> {
             try {
                 saveMethod.call();

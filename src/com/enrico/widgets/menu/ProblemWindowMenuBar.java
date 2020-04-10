@@ -20,6 +20,7 @@
 package com.enrico.widgets.menu;
 
 import com.enrico.programresources.FontResources;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 import com.enrico.windows.main.MainWindow;
 import com.enrico.windows.main.problems.GenericProblemWindow;
 
@@ -33,11 +34,11 @@ public final class ProblemWindowMenuBar extends MainMenuBar {
     public ProblemWindowMenuBar(GenericProblemWindow win) {
         super();
 
-        problemMenu = new JMenu("Problem");
+        problemMenu = new JMenu(ProgramMessageBundle.getString(ProgramMessageBundle.PROBLEM_TXT));
         problemMenu.setFont(FontResources.menuBarFont);
 
-        JMenuItem problemMenuItemSolve = problemMenu.add("Solve");
-        JMenuItem problemMenuItemStartAnother = problemMenu.add("Solve another problem");
+        JMenuItem problemMenuItemSolve = problemMenu.add(ProgramMessageBundle.getString(ProgramMessageBundle.SOLVE_TXT));
+        JMenuItem problemMenuItemStartAnother = problemMenu.add(ProgramMessageBundle.getString(ProgramMessageBundle.SOLVE_ANOTHER_PROBLEM_TXT));
 
         problemMenuItemSolve.setFont(FontResources.menuBarFont);
         problemMenuItemStartAnother.setFont(FontResources.menuBarFont);
@@ -48,7 +49,7 @@ public final class ProblemWindowMenuBar extends MainMenuBar {
             MainWindow window = new MainWindow();
             window.showWindow();
         });
-        saveMenuItem = problemMenu.add("Save");
+        saveMenuItem = problemMenu.add(ProgramMessageBundle.getString(ProgramMessageBundle.SAVE_TXT));
         saveMenuItem.setFont(FontResources.menuBarFont);
 
         add(problemMenu);

@@ -230,9 +230,7 @@ public final class MoleculeBuilderWindow extends GenericProblemWindow implements
 
         JMenuItem sizeItem = menuBar.problemMenu.add(ProgramMessageBundle.messageBundle.getString(ProgramMessageBundle.CANVAS_SIZE));
         sizeItem.setFont(FontResources.menuBarFont);
-        sizeItem.addActionListener(actionEvent -> {
-            showCanvasSizeDialog();
-        });
+        sizeItem.addActionListener(actionEvent -> showCanvasSizeDialog());
     }
 
     @Override

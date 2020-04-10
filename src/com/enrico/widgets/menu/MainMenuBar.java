@@ -20,6 +20,7 @@
 package com.enrico.widgets.menu;
 
 import com.enrico.programresources.FontResources;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 import com.enrico.windows.dialogs.infodialog.InfoDialog;
 
 import javax.swing.*;
@@ -30,12 +31,12 @@ import javax.swing.*;
 public class MainMenuBar extends JMenuBar {
 
     public MainMenuBar() {
-        JMenu programMenu = new JMenu("Program");
+        JMenu programMenu = new JMenu(ProgramMessageBundle.getString(ProgramMessageBundle.PROGRAM_TXT));
         programMenu.setFont(FontResources.menuBarFont);
 
         // Items for "Program" menu.
-        JMenuItem infoItem = programMenu.add("Info");
-        JMenuItem exitItem = programMenu.add("Exit");
+        JMenuItem infoItem = programMenu.add(ProgramMessageBundle.getString(ProgramMessageBundle.INFO_TXT));
+        JMenuItem exitItem = programMenu.add(ProgramMessageBundle.getString(ProgramMessageBundle.EXIT_TXT));
 
         infoItem.setFont(FontResources.menuBarFont);
         exitItem.setFont(FontResources.menuBarFont);
