@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.lanthanides;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface DysprosiumAtomInterface {
     String ATOM_SYMBOL = "Dy";
-    String ATOM_NAME = "Dysprosium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(DysprosiumAtomInterface.class);
     int ATOMIC_NUMBER = 66;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 573;

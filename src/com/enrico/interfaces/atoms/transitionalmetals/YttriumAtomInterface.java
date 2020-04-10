@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.transitionalmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface YttriumAtomInterface {
     String ATOM_SYMBOL = "Y";
-    String ATOM_NAME = "Yttrium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(YttriumAtomInterface.class);
     int ATOMIC_NUMBER = 39;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 600;

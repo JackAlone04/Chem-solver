@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.transitionalmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface CadmiumAtomInterface {
     String ATOM_SYMBOL = "Cd";
-    String ATOM_NAME = "Cadmium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(CadmiumAtomInterface.class);
     int ATOMIC_NUMBER = 48;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 867;

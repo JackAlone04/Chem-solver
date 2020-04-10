@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.alkalinemetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface PotassiumAtomInterface {
     String ATOM_SYMBOL = "K";
-    String ATOM_NAME = "Potassium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(PotassiumAtomInterface.class);
     int ATOMIC_NUMBER = 19;
     int BONDING_ELECTRONS = 1;
     int IONIZATION_NUMBER = 419;

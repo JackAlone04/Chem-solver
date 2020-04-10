@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.transitionalmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface PlatinumAtomInterface {
     String ATOM_SYMBOL = "Pt";
-    String ATOM_NAME = "Platinum";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(PlatinumAtomInterface.class);
     int ATOMIC_NUMBER = 78;
     int BONDING_ELECTRONS = 1;
     int IONIZATION_NUMBER = 870;

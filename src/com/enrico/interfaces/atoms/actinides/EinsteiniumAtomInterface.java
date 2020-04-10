@@ -21,10 +21,11 @@
 package com.enrico.interfaces.atoms.actinides;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface EinsteiniumAtomInterface {
     String ATOM_SYMBOL = "Es";
-    String ATOM_NAME = "Einsteinium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(EinsteiniumAtomInterface.class);
     int ATOMIC_NUMBER = 99;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 619;

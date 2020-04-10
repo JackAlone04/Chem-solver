@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.transitionalmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface TungstenAtomInterface {
     String ATOM_SYMBOL = "W";
-    String ATOM_NAME = "Tungsten";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(TungstenAtomInterface.class);
     int ATOMIC_NUMBER = 74;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 770;

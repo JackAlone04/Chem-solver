@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.halogens;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface FluorineAtomInterface {
     String ATOM_SYMBOL = "F";
-    String ATOM_NAME = "Fluorine";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(BromineAtomInterface.class);
     int ATOMIC_NUMBER = 9;
     int BONDING_ELECTRONS = 1;
     int IONIZATION_NUMBER = 1681;

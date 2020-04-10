@@ -21,10 +21,11 @@
 package com.enrico.interfaces.atoms.actinides;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface MendeleviumAtomInterface {
     String ATOM_SYMBOL = "Md";
-    String ATOM_NAME = "Mendelevium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(MendeleviumAtomInterface.class);
     int ATOMIC_NUMBER = 101;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 636;

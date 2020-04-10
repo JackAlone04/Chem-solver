@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.pblockmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface AluminiumAtomInterface {
     String ATOM_SYMBOL = "Al";
-    String ATOM_NAME = "Aluminium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(AluminiumAtomInterface.class);
     int ATOMIC_NUMBER = 13;
     int BONDING_ELECTRONS = 3;
     int IONIZATION_NUMBER = 578;

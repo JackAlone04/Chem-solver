@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.pblockmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface BismuthAtomInterface {
     String ATOM_SYMBOL = "Bi";
-    String ATOM_NAME = "Bismuth";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(BismuthAtomInterface.class);
     int ATOMIC_NUMBER = 83;
     int BONDING_ELECTRONS = 5;
     int IONIZATION_NUMBER = 703;

@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.transitionalmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface ScandiumAtomInterface {
     String ATOM_SYMBOL = "Sc";
-    String ATOM_NAME = "Scandium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(ScandiumAtomInterface.class);
     int ATOMIC_NUMBER = 21;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 633;

@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.semimetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface AstatineAtomInterface {
     String ATOM_SYMBOL = "At";
-    String ATOM_NAME = "Astatine";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(AstatineAtomInterface.class);
     int ATOMIC_NUMBER = 85;
     int BONDING_ELECTRONS = 1;
     int IONIZATION_NUMBER = 930;

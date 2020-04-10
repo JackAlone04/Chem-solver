@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.pblockmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface TinAtomInterface {
     String ATOM_SYMBOL = "Sn";
-    String ATOM_NAME = "Tin";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(TinAtomInterface.class);
     int ATOMIC_NUMBER = 50;
     int BONDING_ELECTRONS = 4;
     int IONIZATION_NUMBER = 709;

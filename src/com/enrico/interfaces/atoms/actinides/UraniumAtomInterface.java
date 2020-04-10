@@ -21,10 +21,11 @@
 package com.enrico.interfaces.atoms.actinides;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface UraniumAtomInterface {
     String ATOM_SYMBOL = "U";
-    String ATOM_NAME = "Uranium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(UraniumAtomInterface.class);
     int ATOMIC_NUMBER = 92;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 597;

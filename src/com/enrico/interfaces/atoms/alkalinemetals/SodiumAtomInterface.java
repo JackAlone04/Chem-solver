@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.alkalinemetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface SodiumAtomInterface {
     String ATOM_SYMBOL = "Na";
-    String ATOM_NAME = "Sodium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(SodiumAtomInterface.class);
     int ATOMIC_NUMBER = 11;
     int BONDING_ELECTRONS = 1;
     int IONIZATION_NUMBER = 496;

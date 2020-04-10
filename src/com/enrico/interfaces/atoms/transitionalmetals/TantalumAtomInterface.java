@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.transitionalmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface TantalumAtomInterface {
     String ATOM_SYMBOL = "Ta";
-    String ATOM_NAME = "Tantalum";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(TantalumAtomInterface.class);
     int ATOMIC_NUMBER = 73;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 761;

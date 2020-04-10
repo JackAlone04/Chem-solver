@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.pblockmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface ThalliumAtomInterface {
     String ATOM_SYMBOL = "Tl";
-    String ATOM_NAME = "Thallium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(ThalliumAtomInterface.class);
     int ATOMIC_NUMBER = 81;
     int BONDING_ELECTRONS = 3;
     int IONIZATION_NUMBER = 589;

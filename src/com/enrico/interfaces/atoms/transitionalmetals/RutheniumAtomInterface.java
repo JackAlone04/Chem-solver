@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.transitionalmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface RutheniumAtomInterface {
     String ATOM_SYMBOL = "Ru";
-    String ATOM_NAME = "Ruthenium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(RutheniumAtomInterface.class);
     int ATOMIC_NUMBER = 44;
     int BONDING_ELECTRONS = 1;
     int IONIZATION_NUMBER = 710;

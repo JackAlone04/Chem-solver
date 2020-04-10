@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.noblegasses;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface XenonAtomInterface {
     String ATOM_SYMBOL = "Xe";
-    String ATOM_NAME = "Xenon";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(XenonAtomInterface.class);
     int ATOMIC_NUMBER = 54;
     int BONDING_ELECTRONS = 8;
     int DOUBLETS = 4;

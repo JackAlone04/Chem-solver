@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.nonmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface HydrogenAtomInterface {
     String ATOM_SYMBOL = "H";
-    String ATOM_NAME = "Hydrogen";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(HydrogenAtomInterface.class);
     int ATOMIC_NUMBER = 1;
     int BONDING_ELECTRONS = 1;
     int IONIZATION_ENERGY = 1312;

@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.lanthanides;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface PraseodymiumAtomInterface {
     String ATOM_SYMBOL = "Pr";
-    String ATOM_NAME = "Praseodymium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(PraseodymiumAtomInterface.class);
     int ATOMIC_NUMBER = 59;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 527;

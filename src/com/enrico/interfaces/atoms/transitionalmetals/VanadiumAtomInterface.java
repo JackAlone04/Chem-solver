@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.transitionalmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface VanadiumAtomInterface {
     String ATOM_SYMBOL = "V";
-    String ATOM_NAME = "Vanadium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(VanadiumAtomInterface.class);
     int ATOMIC_NUMBER = 23;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 650;

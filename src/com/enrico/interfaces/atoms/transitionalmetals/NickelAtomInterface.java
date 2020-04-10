@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.transitionalmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface NickelAtomInterface {
     String ATOM_SYMBOL = "Ni";
-    String ATOM_NAME = "Nickel";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(NickelAtomInterface.class);
     int ATOMIC_NUMBER = 28;
     int BONDING_ELECTRONS = 1;
     int IONIZATION_NUMBER = 737;

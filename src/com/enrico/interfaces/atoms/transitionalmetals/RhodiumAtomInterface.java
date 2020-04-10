@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.transitionalmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface RhodiumAtomInterface {
     String ATOM_SYMBOL = "Rh";
-    String ATOM_NAME = "Rhodium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(RhodiumAtomInterface.class);
     int ATOMIC_NUMBER = 45;
     int BONDING_ELECTRONS = 1;
     int IONIZATION_NUMBER = 719;

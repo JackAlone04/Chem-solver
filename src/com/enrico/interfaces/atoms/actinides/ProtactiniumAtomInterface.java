@@ -21,10 +21,11 @@
 package com.enrico.interfaces.atoms.actinides;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface ProtactiniumAtomInterface {
     String ATOM_SYMBOL = "Pa";
-    String ATOM_NAME = "Protactinium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(ProtactiniumAtomInterface.class);
     int ATOMIC_NUMBER = 91;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 568;

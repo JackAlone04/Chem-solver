@@ -21,10 +21,11 @@
 package com.enrico.interfaces.atoms.actinides;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface AmericiumAtomInterface {
     String ATOM_SYMBOL = "Am";
-    String ATOM_NAME = "Americium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(AmericiumAtomInterface.class);
     int ATOMIC_NUMBER = 95;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 578;

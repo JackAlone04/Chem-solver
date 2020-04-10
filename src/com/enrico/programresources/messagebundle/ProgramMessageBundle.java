@@ -19,6 +19,7 @@
 
 package com.enrico.programresources.messagebundle;
 
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
@@ -48,6 +49,16 @@ public final class ProgramMessageBundle {
         if (messageBundle != null)
             return messageBundle.getString(key);
         return null;
+    }
+
+    /**
+     * We use reflection to get the interface name that contains the atom name to get the internationalized atom name.
+     * @param atomInterface the interface of the atom which has the atom's name in its name.
+     * @return the internationalized atom name.
+     */
+    @NotNull
+    public static String getAtomClassName(@NotNull Class<?> atomInterface) {
+        return messageBundle.getString(atomInterface.getCanonicalName().split("\\.")[5].split("Atom")[0].toLowerCase());
     }
 
     // Welcome window.

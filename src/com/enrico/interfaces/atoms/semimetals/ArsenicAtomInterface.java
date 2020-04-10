@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.semimetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface ArsenicAtomInterface {
     String ATOM_SYMBOL = "As";
-    String ATOM_NAME = "Arsenic";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(ArsenicAtomInterface.class);
     int ATOMIC_NUMBER = 33;
     int BONDING_ELECTRONS = 3;
     int IONIZATION_NUMBER = 947;

@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.transitionalmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface ManganeseAtomInterface {
     String ATOM_SYMBOL = "Mn";
-    String ATOM_NAME = "Manganese";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(ManganeseAtomInterface.class);
     int ATOMIC_NUMBER = 25;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 717;

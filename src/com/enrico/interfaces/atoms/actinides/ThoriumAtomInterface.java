@@ -21,10 +21,11 @@
 package com.enrico.interfaces.atoms.actinides;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface ThoriumAtomInterface {
     String ATOM_SYMBOL = "Th";
-    String ATOM_NAME = "Thorium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(ThoriumAtomInterface.class);
     int ATOMIC_NUMBER = 90;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 587;

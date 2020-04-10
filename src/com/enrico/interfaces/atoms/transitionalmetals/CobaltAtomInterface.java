@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.transitionalmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface CobaltAtomInterface {
     String ATOM_SYMBOL = "Co";
-    String ATOM_NAME = "Cobalt";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(CobaltAtomInterface.class);
     int ATOMIC_NUMBER = 27;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 760;

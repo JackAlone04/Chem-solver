@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.lanthanides;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface LanthanumAtomInterface {
     String ATOM_SYMBOL = "La";
-    String ATOM_NAME = "Lanthanum";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(LanthanumAtomInterface.class);
     int ATOMIC_NUMBER = 57;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 538;

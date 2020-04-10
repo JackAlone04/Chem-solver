@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.nonmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface PhosphorusAtomInterface {
     String ATOM_SYMBOL = "P";
-    String ATOM_NAME = "Phosphor";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(PhosphorusAtomInterface.class);
     int ATOMIC_NUMBER = 15;
     int BONDING_ELECTRONS = 3;
     int IONIZATION_ENERGY = 1012;

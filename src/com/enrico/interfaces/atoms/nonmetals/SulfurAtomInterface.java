@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.nonmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface SulfurAtomInterface {
     String ATOM_SYMBOL = "S";
-    String ATOM_NAME = "Sulfur";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(SulfurAtomInterface.class);
     int ATOMIC_NUMBER = 16;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_ENERGY = 1000;

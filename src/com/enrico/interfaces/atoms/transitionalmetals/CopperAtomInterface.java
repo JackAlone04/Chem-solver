@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.transitionalmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface CopperAtomInterface {
     String ATOM_SYMBOL = "Cu";
-    String ATOM_NAME = "Copper";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(CopperAtomInterface.class);
     int ATOMIC_NUMBER = 29;
     int BONDING_ELECTRONS = 1;
     int IONIZATION_NUMBER = 745;

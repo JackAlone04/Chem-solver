@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.lanthanides;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface EuropiumAtomInterface {
     String ATOM_SYMBOL = "Eu";
-    String ATOM_NAME = "Europium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(EuropiumAtomInterface.class);
     int ATOMIC_NUMBER = 63;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 547;

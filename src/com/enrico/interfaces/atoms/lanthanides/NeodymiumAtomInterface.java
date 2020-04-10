@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.lanthanides;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface NeodymiumAtomInterface {
     String ATOM_SYMBOL = "Nd";
-    String ATOM_NAME = "Neodymium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(NeodymiumAtomInterface.class);
     int ATOMIC_NUMBER = 60;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 533;

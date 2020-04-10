@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.nonmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface OxygenAtomInterface {
     String ATOM_SYMBOL = "O";
-    String ATOM_NAME = "Oxygen";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(OxygenAtomInterface.class);
     int ATOMIC_NUMBER = 8;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_ENERGY = 1314;

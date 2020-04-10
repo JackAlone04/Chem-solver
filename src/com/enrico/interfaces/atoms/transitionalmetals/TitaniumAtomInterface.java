@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.transitionalmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface TitaniumAtomInterface {
     String ATOM_SYMBOL = "Ti";
-    String ATOM_NAME = "Titanium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(TitaniumAtomInterface.class);
     int ATOMIC_NUMBER = 22;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 658;

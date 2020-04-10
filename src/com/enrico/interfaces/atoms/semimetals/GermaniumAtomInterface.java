@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.semimetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface GermaniumAtomInterface {
     String ATOM_SYMBOL = "Ge";
-    String ATOM_NAME = "Germanium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(GermaniumAtomInterface.class);
     int ATOMIC_NUMBER = 32;
     int BONDING_ELECTRONS = 4;
     int IONIZATION_NUMBER = 726;

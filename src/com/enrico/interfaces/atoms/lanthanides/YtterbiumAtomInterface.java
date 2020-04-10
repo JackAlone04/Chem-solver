@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.lanthanides;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface YtterbiumAtomInterface {
     String ATOM_SYMBOL = "Yb";
-    String ATOM_NAME = "Ytterbium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(YtterbiumAtomInterface.class);
     int ATOMIC_NUMBER = 70;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 603;

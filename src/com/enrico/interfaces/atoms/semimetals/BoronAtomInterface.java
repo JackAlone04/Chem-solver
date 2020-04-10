@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.semimetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface BoronAtomInterface {
     String ATOM_SYMBOL = "B";
-    String ATOM_NAME = "Boron";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(BoronAtomInterface.class);
     int ATOMIC_NUMBER = 5;
     int BONDING_ELECTRONS = 3;
     int IONIZATION_NUMBER = 801;

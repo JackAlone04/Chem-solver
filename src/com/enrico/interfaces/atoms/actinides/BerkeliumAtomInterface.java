@@ -21,10 +21,11 @@
 package com.enrico.interfaces.atoms.actinides;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface BerkeliumAtomInterface {
     String ATOM_SYMBOL = "Bk";
-    String ATOM_NAME = "Berkelium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(BerkeliumAtomInterface.class);
     int ATOMIC_NUMBER = 97;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 601;

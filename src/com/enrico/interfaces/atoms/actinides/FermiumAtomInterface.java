@@ -21,10 +21,11 @@
 package com.enrico.interfaces.atoms.actinides;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface FermiumAtomInterface {
     String ATOM_SYMBOL = "Fm";
-    String ATOM_NAME = "Fermium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(FermiumAtomInterface.class);
     int ATOMIC_NUMBER = 100;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 629;

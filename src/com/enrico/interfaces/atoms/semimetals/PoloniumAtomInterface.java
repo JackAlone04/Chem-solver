@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.semimetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface PoloniumAtomInterface {
     String ATOM_SYMBOL = "Po";
-    String ATOM_NAME = "Polonium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(PoloniumAtomInterface.class);
     int ATOMIC_NUMBER = 84;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 812;

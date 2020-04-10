@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.semimetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface AntimonyAtomInterface {
     String ATOM_SYMBOL = "Sb";
-    String ATOM_NAME = "Antimony";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(AntimonyAtomInterface.class);
     int ATOMIC_NUMBER = 51;
     int BONDING_ELECTRONS = 3;
     int IONIZATION_NUMBER = 834;

@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.alkalinemetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface LithiumAtomInterface {
     String ATOM_SYMBOL = "Li";
-    String ATOM_NAME = "Lithium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(LithiumAtomInterface.class);
     int ATOMIC_NUMBER = 3;
     int BONDING_ELECTRONS = 1;
     int IONIZATION_NUMBER = 513;

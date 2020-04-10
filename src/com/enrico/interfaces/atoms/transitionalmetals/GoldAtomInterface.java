@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.transitionalmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface GoldAtomInterface {
     String ATOM_SYMBOL = "Au";
-    String ATOM_NAME = "Gold";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(GoldAtomInterface.class);
     int ATOMIC_NUMBER = 79;
     int BONDING_ELECTRONS = 1;
     int IONIZATION_NUMBER = 890;

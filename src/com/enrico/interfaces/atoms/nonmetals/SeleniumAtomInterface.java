@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.nonmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface SeleniumAtomInterface {
     String ATOM_SYMBOL = "Se";
-    String ATOM_NAME = "Selenium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(SeleniumAtomInterface.class);
     int ATOMIC_NUMBER = 34;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_ENERGY = 941;

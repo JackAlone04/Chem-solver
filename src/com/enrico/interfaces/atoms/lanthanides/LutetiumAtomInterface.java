@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.lanthanides;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface LutetiumAtomInterface {
     String ATOM_SYMBOL = "Lu";
-    String ATOM_NAME = "Lutetium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(LutetiumAtomInterface.class);
     int ATOMIC_NUMBER = 71;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 523;

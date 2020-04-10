@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.nonmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface CarbonAtomInterface {
     String ATOM_SYMBOL = "C";
-    String ATOM_NAME = "Carbon";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(CarbonAtomInterface.class);
     int ATOMIC_NUMBER = 6;
     int BONDING_ELECTRONS = 4;
     int IONIZATION_NUMBER = 1086;

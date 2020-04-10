@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.lanthanides;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface PromethiumAtomInterface {
     String ATOM_SYMBOL = "Pm";
-    String ATOM_NAME = "Promethium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(PromethiumAtomInterface.class);
     int ATOMIC_NUMBER = 61;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 540;

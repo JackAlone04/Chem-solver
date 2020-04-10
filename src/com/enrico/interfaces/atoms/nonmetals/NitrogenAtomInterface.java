@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.nonmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface NitrogenAtomInterface {
     String ATOM_SYMBOL = "N";
-    String ATOM_NAME = "Nitrogen";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(NitrogenAtomInterface.class);
     int ATOMIC_NUMBER = 7;
     int BONDING_ELECTRONS = 3;
     int IONIZATION_ENERGY = 1402;

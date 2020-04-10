@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.noblegasses;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface KryptonAtomInterface {
     String ATOM_SYMBOL = "Kr";
-    String ATOM_NAME = "Krypton";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(KryptonAtomInterface.class);
     int ATOMIC_NUMBER = 36;
     int BONDING_ELECTRONS = 8;
     int DOUBLETS = 4;

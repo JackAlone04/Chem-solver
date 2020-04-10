@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.pblockmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface LeadAtomInterface {
     String ATOM_SYMBOL = "Pb";
-    String ATOM_NAME = "Lead";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(LeadAtomInterface.class);
     int ATOMIC_NUMBER = 82;
     int BONDING_ELECTRONS = 4;
     int IONIZATION_NUMBER = 716;

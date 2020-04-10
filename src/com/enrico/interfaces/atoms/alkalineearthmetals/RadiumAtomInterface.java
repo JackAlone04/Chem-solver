@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.alkalineearthmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface RadiumAtomInterface {
     String ATOM_SYMBOL = "Ra";
-    String ATOM_NAME = "Radium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(RadiumAtomInterface.class);
     int ATOMIC_NUMBER = 88;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 509;

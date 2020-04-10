@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.transitionalmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface SilverAtomInterface {
     String ATOM_SYMBOL = "Ag";
-    String ATOM_NAME = "Silver";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(SilverAtomInterface.class);
     int ATOMIC_NUMBER = 47;
     int BONDING_ELECTRONS = 1;
     int IONIZATION_NUMBER = 731;

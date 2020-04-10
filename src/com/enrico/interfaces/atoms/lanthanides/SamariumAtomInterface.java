@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.lanthanides;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface SamariumAtomInterface {
     String ATOM_SYMBOL = "Sm";
-    String ATOM_NAME = "Samarium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(SamariumAtomInterface.class);
     int ATOMIC_NUMBER = 62;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 544;

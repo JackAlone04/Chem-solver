@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.semimetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface SiliconAtomInterface {
     String ATOM_SYMBOL = "Si";
-    String ATOM_NAME = "Silicon";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(SiliconAtomInterface.class);
     int ATOMIC_NUMBER = 14;
     int BONDING_ELECTRONS = 4;
     int IONIZATION_NUMBER = 786;

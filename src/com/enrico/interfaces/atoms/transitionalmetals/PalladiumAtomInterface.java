@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.transitionalmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface PalladiumAtomInterface {
     String ATOM_SYMBOL = "Pd";
-    String ATOM_NAME = "Palladium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(PalladiumAtomInterface.class);
     int ATOMIC_NUMBER = 46;
     int BONDING_ELECTRONS = 18;
     int IONIZATION_NUMBER = 804;

@@ -21,10 +21,11 @@
 package com.enrico.interfaces.atoms.actinides;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface NobeliumAtomInterface {
     String ATOM_SYMBOL = "No";
-    String ATOM_NAME = "Nobelium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(NobeliumAtomInterface.class);
     int ATOMIC_NUMBER = 102;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 639;

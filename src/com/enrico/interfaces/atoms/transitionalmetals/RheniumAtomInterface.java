@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.transitionalmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface RheniumAtomInterface {
     String ATOM_SYMBOL = "Re";
-    String ATOM_NAME = "Rhenium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(RheniumAtomInterface.class);
     int ATOMIC_NUMBER = 75;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 760;

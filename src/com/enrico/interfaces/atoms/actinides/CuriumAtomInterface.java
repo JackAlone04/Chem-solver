@@ -21,10 +21,11 @@
 package com.enrico.interfaces.atoms.actinides;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface CuriumAtomInterface {
     String ATOM_SYMBOL = "Cm";
-    String ATOM_NAME = "Curium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(CuriumAtomInterface.class);
     int ATOMIC_NUMBER = 96;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 581;

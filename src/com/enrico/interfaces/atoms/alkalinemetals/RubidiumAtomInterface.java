@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.alkalinemetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface RubidiumAtomInterface {
     String ATOM_SYMBOL = "Rb";
-    String ATOM_NAME = "Rubidium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(RubidiumAtomInterface.class);
     int ATOMIC_NUMBER = 37;
     int BONDING_ELECTRONS = 1;
     int IONIZATION_NUMBER = 403;

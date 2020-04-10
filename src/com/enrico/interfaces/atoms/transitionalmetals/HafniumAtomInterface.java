@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.transitionalmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface HafniumAtomInterface {
     String ATOM_SYMBOL = "Hf";
-    String ATOM_NAME = "Hafnium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(HafniumAtomInterface.class);
     int ATOMIC_NUMBER = 72;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 658;

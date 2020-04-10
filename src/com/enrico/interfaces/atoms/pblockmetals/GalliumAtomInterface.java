@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.pblockmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface GalliumAtomInterface {
     String ATOM_SYMBOL = "Ga";
-    String ATOM_NAME = "Gallium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(GalliumAtomInterface.class);
     int ATOMIC_NUMBER = 31;
     int BONDING_ELECTRONS = 3;
     int IONIZATION_NUMBER = 579;

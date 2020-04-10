@@ -21,10 +21,12 @@
 package com.enrico.interfaces.atoms.transitionalmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface MolybdenumAtomInterface {
     String ATOM_SYMBOL = "Mo";
-    String ATOM_NAME = "Molybdenum";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(MolybdenumAtomInterface.class);
     int ATOMIC_NUMBER = 42;
     int BONDING_ELECTRONS = 1;
     int IONIZATION_NUMBER = 684;

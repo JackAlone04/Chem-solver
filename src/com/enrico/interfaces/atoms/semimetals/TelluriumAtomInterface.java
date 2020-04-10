@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.semimetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface TelluriumAtomInterface {
     String ATOM_SYMBOL = "Te";
-    String ATOM_NAME = "Tellurium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(TelluriumAtomInterface.class);
     int ATOMIC_NUMBER = 52;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 869;

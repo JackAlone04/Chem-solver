@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.pblockmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface IndiumAtomInterface {
     String ATOM_SYMBOL = "In";
-    String ATOM_NAME = "Indium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(IndiumAtomInterface.class);
     int ATOMIC_NUMBER = 49;
     int BONDING_ELECTRONS = 3;
     int IONIZATION_NUMBER = 558;

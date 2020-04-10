@@ -20,10 +20,12 @@
 package com.enrico.interfaces.atoms.alkalineearthmetals;
 
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.interfaces.atoms.actinides.FermiumAtomInterface;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 public interface BariumAtomInterface {
     String ATOM_SYMBOL = "Ba";
-    String ATOM_NAME = "Barium";
+    String ATOM_NAME = ProgramMessageBundle.getAtomClassName(BariumAtomInterface.class);
     int ATOMIC_NUMBER = 56;
     int BONDING_ELECTRONS = 2;
     int IONIZATION_NUMBER = 503;
