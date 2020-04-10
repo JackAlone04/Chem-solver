@@ -123,4 +123,14 @@ public final class ProgramMessageBundle {
     public static final String REMOVE_DOUBLE_BOND_TXT = "remove_double_bond_txt";
     public static final String TRIPLE_BOND_TO_TXT = "triple_bond_to_txt";
     public static final String REMOVE_TRIPLE_BOND_TXT = "remove_triple_bond_txt";
+
+    // Generic menu bar.
+    public static final String PROGRAM_TXT = "program_txt";
+    public static final String INFO_TXT = "info_txt";
+    public static final String EXIT_TXT = "exit_txt";
+    public static final String PROBLEM_TXT = "problem_txt";
+    public static final String SOLVE_TXT = "solve_txt";
+    public static final String SOLVE_ANOTHER_PROBLEM_TXT = "solve_another_problem_txt";
+    public static final String SAVE_TXT = "save_txt";
+    public static final String SAVE_IMAGE_TXT = "save_image_txt";
 }
