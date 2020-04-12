@@ -133,4 +133,23 @@ public final class ProgramMessageBundle {
     public static final String SOLVE_ANOTHER_PROBLEM_TXT = "solve_another_problem_txt";
     public static final String SAVE_TXT = "save_txt";
     public static final String SAVE_IMAGE_TXT = "save_image_txt";
+
+    // Compound classification window.
+    public static final String FORMULA_INSERT_TXT = "formula_insert_txt";
+    public static final String NUMBER_OF_ELEMENTS_INSERT_TXT = "number_of_elements_insert_txt";
+    public static final String TYPE_OUT_TXT = "type_out_txt";
+    public static final String INSERT_FORMULA_ERROR_TITLE_TXT = "insert_formula_error_title_txt";
+    public static final String INSERT_FORMULA_ERROR_TXT = "insert_formula_error_txt";
+    public static final String FORMULA_ERROR_TXT = "formula_error_txt";
+
+    // Compound types.
+    public static final String HYDRIDE_TXT = "hydride_txt";
+    public static final String ANHYDRIDE_TXT = "anhydride_txt";
+    public static final String OXOACID_TXT = "oxoacid_txt";
+    public static final String PEROXIDE_TXT = "peroxide_txt";
+    public static final String HYDROXIDE_TXT = "hydroxide_txt";
+    public static final String BASIC_OXIDE_TXT = "basic_oxide_txt";
+    public static final String BINARY_ACID_TXT = "binary_acid_txt";
+    public static final String BINARY_IONIC_TXT = "binary_ionic_txt";
+    public static final String TERNARY_SALT_TXT = "ternary_salt_txt";
 }

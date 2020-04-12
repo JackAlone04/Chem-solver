@@ -23,23 +23,22 @@ import com.enrico.chemistry.atoms.scientific.GenericScientificAtom;
 import com.enrico.chemistry.formulaparser.FormulaParser;
 import com.enrico.chemistry.molecule.Molecule;
 import com.enrico.programresources.FontResources;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 import com.enrico.widgets.menu.ProblemWindowMenuBar;
 import com.enrico.windows.main.problems.GenericProblemWindow;
-import com.enrico.widgets.label.ProgramLabel;
-import com.enrico.widgets.textfiled.ProgramTextField;
 
 import javax.swing.*;
 
 public final class CompoundClassificationProblemWindow extends GenericProblemWindow {
     public static final String TITLE = "Compound classification";
 
-    private ProgramTextField formulaField;
-    private ProgramLabel numberOfElementsLbl;
-    private ProgramLabel moleculeTypeLbl;
+    private JTextField formulaField;
+    private JLabel numberOfElementsLbl;
+    private JLabel moleculeTypeLbl;
     private JPanel mainPane;
-    private ProgramLabel formulaTxtLbl;
-    private ProgramLabel numOfElementsLbl;
-    private ProgramLabel typeLbl;
+    private JLabel formulaTxtLbl;
+    private JLabel numOfElementsLbl;
+    private JLabel typeLbl;
 
     public CompoundClassificationProblemWindow() {
         super(TITLE);
@@ -50,6 +49,18 @@ public final class CompoundClassificationProblemWindow extends GenericProblemWin
         setResizable(false);
 
         setContentPane(mainPane);
+
+        formulaTxtLbl.setText(ProgramMessageBundle.getString(ProgramMessageBundle.FORMULA_INSERT_TXT));
+        formulaTxtLbl.setFont(FontResources.normalTextFont);
+
+        numOfElementsLbl.setText(ProgramMessageBundle.getString(ProgramMessageBundle.NUMBER_OF_ELEMENTS_INSERT_TXT));
+        numOfElementsLbl.setFont(FontResources.normalTextFont);
+
+        typeLbl.setText(ProgramMessageBundle.getString(ProgramMessageBundle.TYPE_OUT_TXT));
+        typeLbl.setFont(FontResources.normalTextFont);
+
+        moleculeTypeLbl.setFont(FontResources.normalTextFont);
+        numberOfElementsLbl.setFont(FontResources.normalTextFont);
     }
 
     @Override
@@ -61,8 +72,8 @@ public final class CompoundClassificationProblemWindow extends GenericProblemWin
         String formula = formulaField.getText();
         if (formula.isEmpty()) {
             JOptionPane.showMessageDialog(this,
-                    "Please insert a formula to evaluate.",
-                    "No formula found.",
+                    ProgramMessageBundle.getString(ProgramMessageBundle.INSERT_FORMULA_ERROR_TXT),
+                    ProgramMessageBundle.getString(ProgramMessageBundle.INSERT_FORMULA_ERROR_TITLE_TXT),
                     JOptionPane.ERROR_MESSAGE);
             return;
         }
@@ -80,13 +91,13 @@ public final class CompoundClassificationProblemWindow extends GenericProblemWin
         } catch (IllegalArgumentException e) {
             JOptionPane.showMessageDialog(this,
                     e.getMessage(),
-                    "Formula error.",
+                    ProgramMessageBundle.getString(ProgramMessageBundle.INSERT_FORMULA_ERROR_TITLE_TXT),
                     JOptionPane.ERROR_MESSAGE);
             return;
         }
 
         int elementsNum = molecule.getElementsNum();
         numberOfElementsLbl.setText(String.valueOf(elementsNum));
-        moleculeTypeLbl.setText("Compound type: " + molecule.getCompoundType().toString());
+        moleculeTypeLbl.setText(molecule.getCompoundType().toString());
     }
 }

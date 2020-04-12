@@ -24,6 +24,7 @@ import com.enrico.chemistry.atoms.scientific.GenericScientificAtom;
 import com.enrico.chemistry.atoms.scientific.HydrogenScientificAtom;
 import com.enrico.chemistry.atoms.scientific.OxygenScientificAtom;
 import com.enrico.chemistry.molecule.exceptions.IllegalMoleculeException;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -59,11 +60,11 @@ public class Molecule {
     }
 
     public enum CompoundType {
-        Hydride,
+        Hydride ,
         BinaryAcid,
         Peroxide,
         BasicOxide,
-        BinaryRooms,
+        BinaryIonic,
         Anhydride,
         Oxoacid,
         Hydroxide,
@@ -73,23 +74,23 @@ public class Molecule {
         public String toString() {
             switch (this) {
                 case Hydride:
-                    return "Hydride";
+                    return ProgramMessageBundle.getString(ProgramMessageBundle.HYDRIDE_TXT);
                 case Anhydride:
-                    return "Anhydride";
+                    return ProgramMessageBundle.getString(ProgramMessageBundle.ANHYDRIDE_TXT);
                 case Oxoacid:
-                    return "Oxoacid";
+                    return ProgramMessageBundle.getString(ProgramMessageBundle.OXOACID_TXT);
                 case Peroxide:
-                    return "Peroxide";
+                    return ProgramMessageBundle.getString(ProgramMessageBundle.PEROXIDE_TXT);
                 case Hydroxide:
-                    return "Hydroxide";
+                    return ProgramMessageBundle.getString(ProgramMessageBundle.HYDROXIDE_TXT);
                 case BasicOxide:
-                    return "Basic oxide";
+                    return ProgramMessageBundle.getString(ProgramMessageBundle.BASIC_OXIDE_TXT);
                 case BinaryAcid:
-                    return "Binary acid";
-                case BinaryRooms:
-                    return "Binary rooms";
+                    return ProgramMessageBundle.getString(ProgramMessageBundle.BINARY_ACID_TXT);
+                case BinaryIonic:
+                    return ProgramMessageBundle.getString(ProgramMessageBundle.BINARY_IONIC_TXT);
                 case TernarySalt:
-                    return "Ternary salt";
+                    return ProgramMessageBundle.getString(ProgramMessageBundle.TERNARY_SALT_TXT);
                 default:
                     throw new IllegalArgumentException();
             }
@@ -364,7 +365,7 @@ public class Molecule {
             else if (containsNonMetal() && containsOxygen())
                 compoundType = CompoundType.Anhydride;
             else if (containsMetal() && containsNonMetal())
-                compoundType = CompoundType.BinaryRooms;
+                compoundType = CompoundType.BinaryIonic;
             else
                 throw new IllegalMoleculeException(this);
 
