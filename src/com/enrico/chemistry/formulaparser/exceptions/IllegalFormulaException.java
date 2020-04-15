@@ -19,8 +19,10 @@
 
 package com.enrico.chemistry.formulaparser.exceptions;
 
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
+
 public class IllegalFormulaException extends IllegalArgumentException {
     public IllegalFormulaException(String formula) {
-        super("Error: formula \"" + formula +"\" contains invalid characters or invalid atoms (such as noble gasses or unstable atoms). Please check the formula and try again.");
+        super(ProgramMessageBundle.getString(ProgramMessageBundle.INVALID_FORMULA_EXCEPTION_1) + formula + ProgramMessageBundle.getString(ProgramMessageBundle.INVALID_FORMULA_EXCEPTION_2));
     }
 }

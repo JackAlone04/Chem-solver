@@ -21,6 +21,8 @@ package com.enrico.chemistry.atoms.scientific;
 
 import com.enrico.annotations.chemistry.UnusableAtom;
 import com.enrico.chemistry.atoms.GenericAtom;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
+import org.jetbrains.annotations.NotNull;
 
 public abstract class GenericScientificAtom extends GenericAtom {
 
@@ -36,7 +38,7 @@ public abstract class GenericScientificAtom extends GenericAtom {
         super(symbol, completeName, atomicNumber, atomicMass, electronegativity, bondElectronsNumber, doublets, ionizationEnergy, classType);
     }
 
-    public static double getElectronegativityDifference(GenericScientificAtom genericAtom1, GenericScientificAtom genericAtom2) {
+    public static double getElectronegativityDifference(@NotNull GenericScientificAtom genericAtom1, @NotNull GenericScientificAtom genericAtom2) {
         double atomElectroNegativity1 = genericAtom1.getElectronegativity();
         double atomElectroNegativity2 = genericAtom2.getElectronegativity();
 
@@ -53,6 +55,7 @@ public abstract class GenericScientificAtom extends GenericAtom {
      *
      * @throws IllegalArgumentException
      */
+    @NotNull
     public static GenericAtom getMostElectronegativeAtom(GenericScientificAtom genericAtom1, GenericScientificAtom genericAtom2) throws IllegalArgumentException {
         checkIfUsable(genericAtom1);
         checkIfUsable(genericAtom2);
@@ -74,10 +77,9 @@ public abstract class GenericScientificAtom extends GenericAtom {
             return BondEnum.Ionic;
     }
 
-    public static void checkIfUsable(GenericScientificAtom genericAtom) throws IllegalArgumentException {
+    public static void checkIfUsable(@NotNull GenericScientificAtom genericAtom) throws IllegalArgumentException {
         if (genericAtom.getClass().isAnnotationPresent(UnusableAtom.class))
-            throw new IllegalArgumentException("Atom " + genericAtom.getCompleteName()
-                    + "(" + genericAtom.getSymbol()+") is not usable and no operations can be" +
-                    " done with it.");
+            throw new IllegalArgumentException(ProgramMessageBundle.getString(ProgramMessageBundle.ATOM_NOT_USABLE_1) + genericAtom.getCompleteName()
+                    + "(" + genericAtom.getSymbol() + ProgramMessageBundle.getString(ProgramMessageBundle.ATOM_NOT_USABLE_2));
     }
 }

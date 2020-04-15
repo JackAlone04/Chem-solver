@@ -28,6 +28,7 @@ import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
 /*
  * This class represents generic molecule.
@@ -182,27 +183,27 @@ public class Molecule {
 
         centralGenericScientificAtom = central;
 
-        operationString = operationString.concat("Found central atom: " +
+        operationString = operationString.concat(ProgramMessageBundle.getString(ProgramMessageBundle.OPERATION_STRING_1) +
                                                  centralGenericScientificAtom.getSymbol() + "(" +
                                                  centralGenericScientificAtom.getCompleteName() + ")\n");
     }
 
     private void findDoublets() {
         doubletsNumber = centralGenericScientificAtom.getDoublets();
-        operationString = operationString.concat("Found free doublets of central atom: " +
+        operationString = operationString.concat(ProgramMessageBundle.getString(ProgramMessageBundle.OPERATION_STRING_2) +
                                                  centralGenericScientificAtom.getDoublets() + "\n");
     }
 
     private void setBindedAtoms() {
 
-        operationString = operationString.concat("Binded atoms:\n");
+        operationString = operationString.concat(ProgramMessageBundle.getString(ProgramMessageBundle.OPERATION_STRING_3) + "\n");
 
         // Check if molecule is Hydrogen molecule.
         if (GenericScientificAtomList.length == 2 && centralGenericScientificAtom.getClass() == HydrogenScientificAtom.class &&
             GenericScientificAtomList[1].getClass() == HydrogenScientificAtom.class) {
             bondedGenericScientificAtoms.add(GenericScientificAtomList[1]);
 
-            operationString = operationString.concat("H (Hydrogen)\n");
+            operationString = operationString.concat(ProgramMessageBundle.getString(ProgramMessageBundle.OPERATION_STRING_HYDROGEN) + "\n");
 
             return;
         }
@@ -224,7 +225,11 @@ public class Molecule {
         // All the bonded atoms are Hydrogen atoms.
         if (bondedGenericScientificAtoms.size() == 0) {
             bondedGenericScientificAtoms.addAll(hydrogenAtoms);
-            operationString = operationString.concat("added " + hydrogenAtoms.size() + " Hydrogen atoms\n");
+            operationString = operationString.concat(ProgramMessageBundle.getString(ProgramMessageBundle.ADDED_HYDROGEN_ATOMS_1) +
+                                                     hydrogenAtoms.size() +
+                                                     " " +
+                                                     ProgramMessageBundle.getString(ProgramMessageBundle.ADDED_HYDROGEN_ATOMS_2) +
+                                                     "\n");
         }
     }
 
@@ -258,35 +263,35 @@ public class Molecule {
     }
 
     public void calculateShape() throws IllegalMoleculeException {
-        operationString = operationString.concat("Found shape of molecule: ");
+        operationString = operationString.concat(Objects.requireNonNull(ProgramMessageBundle.getString(ProgramMessageBundle.OPERATION_STRING_4)));
 
         if ((bondedGenericScientificAtoms.size() == 4 && doubletsNumber == 0) ||
             (bondedGenericScientificAtoms.size() == 4 && doubletsNumber == 2)) {
             moleculeShape = ShapeEnum.SquareShape;
-            operationString = operationString.concat("Square shape.\n");
+            operationString = operationString.concat(ProgramMessageBundle.getString(ProgramMessageBundle.SQUARE_MOLECULE_SHAPE) + "\n");
         } else if ((bondedGenericScientificAtoms.size() == 2 && doubletsNumber == 2) ||
                  (bondedGenericScientificAtoms.size() == 2 && doubletsNumber == 5) ||
                  (bondedGenericScientificAtoms.size() == 3 && doubletsNumber == 1)) {
             moleculeShape = ShapeEnum.PyramidShape;
-            operationString = operationString.concat("Pyramid shape.\n");
+            operationString = operationString.concat(ProgramMessageBundle.getString(ProgramMessageBundle.PYRAMID_MOLECULE_SHAPE) + "\n");
         } else if ((bondedGenericScientificAtoms.size() == 2 && doubletsNumber == 0) ||
                  (bondedGenericScientificAtoms.size() == 1 && doubletsNumber == 0) ||
                  (bondedGenericScientificAtoms.size() == 2 && doubletsNumber == 1) ||
                  (bondedGenericScientificAtoms.size() == 1 && doubletsNumber == 3) ||
                  (bondedGenericScientificAtoms.size() == 1 && doubletsNumber == 2)) {
             moleculeShape = ShapeEnum.LineShape;
-            operationString = operationString.concat("Line shape.\n");
+            operationString = operationString.concat(ProgramMessageBundle.getString(ProgramMessageBundle.LINE_MOLECULE_SHAPE) + "\n");
         } else if ((bondedGenericScientificAtoms.size() == 3 && doubletsNumber == 2) ||
                  (bondedGenericScientificAtoms.size() == 3 && doubletsNumber == 0) ||
                  (bondedGenericScientificAtoms.size() == 3 && doubletsNumber == 3)) {
             moleculeShape = ShapeEnum.TriangularShape;
-            operationString = operationString.concat("Triangular shape.\n");
+            operationString = operationString.concat(ProgramMessageBundle.getString(ProgramMessageBundle.TRIANGULAR_MOLECULE_SHAPE) + "\n");
         } else if ((bondedGenericScientificAtoms.size() == 5 && doubletsNumber == 2)) {
             moleculeShape = ShapeEnum.FivePointedStar;
-            operationString = operationString.concat("Five pointed star shape.\n");
+            operationString = operationString.concat(ProgramMessageBundle.getString(ProgramMessageBundle.FIVE_POINTED_STAR_MOLECULE_SHAPE) + "\n");
         } else if ((bondedGenericScientificAtoms.size() == 6 && doubletsNumber == 2)) {
             moleculeShape = ShapeEnum.SixPointedStar;
-            operationString = operationString.concat("Six pointed star shape.\n");
+            operationString = operationString.concat(ProgramMessageBundle.getString(ProgramMessageBundle.SIX_POINTED_STAR_MOLECULE_SHAPE) + "\n");
         } else {
             throw new IllegalMoleculeException(this);
         }

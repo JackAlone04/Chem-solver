@@ -21,10 +21,11 @@ package com.enrico.chemistry.formulaparser;
 
 import com.enrico.chemistry.atoms.scientific.*;
 import com.enrico.chemistry.formulaparser.exceptions.IllegalFormulaException;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 
 import java.util.ArrayList;
 
-public class FormulaParser {
+public final class FormulaParser {
     private String formula;
 
     public FormulaParser(String formula) {
@@ -118,7 +119,7 @@ public class FormulaParser {
                 break;
 
                 default:
-                    throw new IllegalArgumentException("Invalid atom: " + atomSymbol);
+                    throw new IllegalArgumentException(ProgramMessageBundle.getString(ProgramMessageBundle.INVALID_ATOM_TXT) + atomSymbol);
             }
 
             // There always will be at least a single atom.

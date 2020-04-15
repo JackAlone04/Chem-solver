@@ -24,15 +24,13 @@ import com.enrico.chemistry.formulaparser.FormulaParser;
 import com.enrico.chemistry.molecule.Molecule;
 import com.enrico.interfaces.windows.ImageSavingInterface;
 import com.enrico.programresources.FontResources;
+import com.enrico.programresources.messagebundle.ProgramMessageBundle;
 import com.enrico.project.saver.FormulaShapeProjectSaver;
 import com.enrico.project.saver.OverwriteException;
 import com.enrico.project.saver.ProjectSaver;
 import com.enrico.widgets.canvas.moleculeshapecanvas.MoleculeShapeCanvas;
-import com.enrico.widgets.canvas.FileTypeFilter;
-import com.enrico.widgets.canvas.ImageSaver;
 import com.enrico.widgets.menu.ProblemWindowMenuBar;
 import com.enrico.windows.dialogs.overwrite.OverwriteDialog;
-import com.enrico.windows.dialogs.savedialog.SaveDialog;
 import com.enrico.windows.dialogs.savedialog.saveProject.ProjectSaveDialog;
 import com.enrico.windows.main.problems.GenericProblemWindow;
 import com.enrico.widgets.textfiled.ProgramTextField;
@@ -40,8 +38,6 @@ import com.enrico.widgets.label.ProgramLabel;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.File;
-import java.io.IOException;
 import java.util.HashMap;
 
 public final class MolecularShapeProblemWindow extends GenericProblemWindow implements ImageSavingInterface {
@@ -67,6 +63,11 @@ public final class MolecularShapeProblemWindow extends GenericProblemWindow impl
         ProblemWindowMenuBar problemWindowMenuBar = new ProblemWindowMenuBar(this);
         setJMenuBar(problemWindowMenuBar);
 
+        formulaLbl.setText(ProgramMessageBundle.getString(ProgramMessageBundle.FORMULA_INSERT_TXT));
+        resultLbl.setText(ProgramMessageBundle.getString(ProgramMessageBundle.RESULT_OUT_TXT));
+
+        dataPane.setFont(FontResources.normalTextFont);
+
         addSaveImageItem(problemWindowMenuBar, () -> {saveImage(this, mainMoleculeShapeCanvas); return null;});
     }
 
@@ -79,8 +80,8 @@ public final class MolecularShapeProblemWindow extends GenericProblemWindow impl
         String formula = textFieldFormula.getText();
         if (formula.isEmpty()) {
             JOptionPane.showMessageDialog(this,
-                    "Please insert a formula to evaluate.",
-                    "No formula found.",
+                    ProgramMessageBundle.getString(ProgramMessageBundle.INSERT_FORMULA_ERROR_TXT),
+                    ProgramMessageBundle.getString(ProgramMessageBundle.INSERT_FORMULA_ERROR_TITLE_TXT),
                     JOptionPane.ERROR_MESSAGE);
             return;
         }
@@ -101,7 +102,7 @@ public final class MolecularShapeProblemWindow extends GenericProblemWindow impl
         } catch (IllegalArgumentException e) {
             JOptionPane.showMessageDialog(this,
                     e.getMessage(),
-                    "Formula error.",
+                    ProgramMessageBundle.getString(ProgramMessageBundle.FORMULA_ERROR_TXT),
                     JOptionPane.ERROR_MESSAGE);
             return;
         }
