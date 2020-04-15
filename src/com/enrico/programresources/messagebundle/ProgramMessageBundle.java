@@ -152,4 +152,29 @@ public final class ProgramMessageBundle {
     public static final String BINARY_ACID_TXT = "binary_acid_txt";
     public static final String BINARY_IONIC_TXT = "binary_ionic_txt";
     public static final String TERNARY_SALT_TXT = "ternary_salt_txt";
+
+    // Molecule shape window.
+    public static final String RESULT_OUT_TXT = "result_out_txt";
+
+    // Illegal formula exception.
+    public static final String INVALID_ATOM_TXT = "invalid_atom_txt";
+    public static final String INVALID_FORMULA_EXCEPTION_1 = "invalid_formula_exception_1";
+    public static final String INVALID_FORMULA_EXCEPTION_2 = "invalid_formula_exception_2";
+
+    // Operation string.
+    public static final String OPERATION_STRING_1 = "operation_string_1";
+    public static final String OPERATION_STRING_2 = "operation_string_2";
+    public static final String OPERATION_STRING_3 = "operation_string_3";
+    public static final String OPERATION_STRING_HYDROGEN = "operation_string_hydrogen";
+    public static final String ADDED_HYDROGEN_ATOMS_1 = "added_hydrogen_atoms_1";
+    public static final String ADDED_HYDROGEN_ATOMS_2 = "added_hydrogen_atoms_2";
+    public static final String OPERATION_STRING_4 = "operation_string_4";
+    public static final String SQUARE_MOLECULE_SHAPE = "square_molecule_shape";
+    public static final String PYRAMID_MOLECULE_SHAPE = "pyramid_molecule_shape";
+    public static final String LINE_MOLECULE_SHAPE = "line_molecule_shape";
+    public static final String TRIANGULAR_MOLECULE_SHAPE = "triangular_molecule_shape";
+    public static final String FIVE_POINTED_STAR_MOLECULE_SHAPE = "five_pointed_star_molecule_shape";
+    public static final String SIX_POINTED_STAR_MOLECULE_SHAPE = "six_pointed_star_molecule_shape";
+    public static final String ATOM_NOT_USABLE_1 = "atom_not_usable_1";
+    public static final String ATOM_NOT_USABLE_2 = "atom_not_usable_2";
 }
